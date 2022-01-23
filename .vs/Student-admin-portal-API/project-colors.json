@@ -5,7 +5,12 @@
       "ProjectGuid": "7b823943-972b-4550-a1af-3813822398f0",
       "DisplayName": "StudentAdminPortalAPI",
       "ColorIndex": 0
+    },
+    "72461733-c767-4486-a6b7-67795dd2c2bd": {
+      "ProjectGuid": "72461733-c767-4486-a6b7-67795dd2c2bd",
+      "DisplayName": "StudentAPI",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

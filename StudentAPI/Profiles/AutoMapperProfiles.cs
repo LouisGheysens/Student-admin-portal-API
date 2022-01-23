@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using StudentAPI.DomainModels;
+using StudentAPI.Profiles.AfterMaps;
 using DataModels = StudentAPI.DataModels;
 
 namespace StudentAPI.Profiles
@@ -16,6 +17,12 @@ namespace StudentAPI.Profiles
 
             CreateMap<DataModels.Address, Address>()
            .ReverseMap();
+
+            CreateMap<UpdateStudentRequest, DataModels.Student>()
+                .AfterMap<UpdateStudentRequestAfterMap>();
+
+            CreateMap<AddStudentRequest, DataModels.Student>()
+                .AfterMap<AddStudentRequestAftermap>();
         }
     }
 }
