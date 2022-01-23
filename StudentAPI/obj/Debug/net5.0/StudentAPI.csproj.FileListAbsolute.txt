@@ -120,3 +120,6 @@ C:\Users\Eigenaar\Student-admin-portal\Student-admin-portal-API\StudentAPI\obj\D
 C:\Users\Eigenaar\Student-admin-portal\Student-admin-portal-API\StudentAPI\obj\Debug\net5.0\ref\StudentAPI.dll
 C:\Users\Eigenaar\Student-admin-portal\Student-admin-portal-API\StudentAPI\obj\Debug\net5.0\StudentAPI.pdb
 C:\Users\Eigenaar\Student-admin-portal\Student-admin-portal-API\StudentAPI\obj\Debug\net5.0\StudentAPI.genruntimeconfig.cache
+C:\Users\Eigenaar\Student-admin-portal\Student-admin-portal-API\StudentAPI\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Eigenaar\Student-admin-portal\Student-admin-portal-API\StudentAPI\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Eigenaar\Student-admin-portal\Student-admin-portal-API\StudentAPI\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
