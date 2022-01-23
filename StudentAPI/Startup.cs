@@ -3,10 +3,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using StudentAPI.DataModels;
 using StudentAPI.Repositories;
+using System.IO;
 
 namespace StudentAPI
 {
@@ -22,11 +24,21 @@ namespace StudentAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddCors((options) =>
+            {
+                options.AddPolicy("angularApplication", (builder) =>
+                {
+                    builder.WithOrigins("http://localhost:4200")
+                    .AllowAnyHeader()
+                    .WithMethods("GET", "POST", "PUT", "DELETE")
+                    .WithExposedHeaders("*");
+                });
+            });
             services.AddControllers();
             services.AddDbContext<StudentAdminContext>(options => 
             options.UseSqlServer(Configuration.GetConnectionString("SudentAdminPortalDb")));
             services.AddScoped<IStudentRepository, SqlStudentRepository>();
+            services.AddScoped<IImageRepository, LocalStorageImageRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "StudentAPI", Version = "v1" });
@@ -47,7 +59,15 @@ namespace StudentAPI
 
             app.UseHttpsRedirection();
 
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "Resources")),
+                RequestPath = "/Resources"
+            });
+
             app.UseRouting();
+
+            app.UseCors("angularApplication");
 
             app.UseAuthorization();
 

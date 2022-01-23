@@ -6054,11 +6054,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eigenaar\\Student-admin-portal-API\\StudentAPI\\StudentAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Eigenaar\\Student-admin-portal\\Student-admin-portal-API\\StudentAPI\\StudentAPI.csproj",
       "projectName": "StudentAPI",
-      "projectPath": "C:\\Users\\Eigenaar\\Student-admin-portal-API\\StudentAPI\\StudentAPI.csproj",
+      "projectPath": "C:\\Users\\Eigenaar\\Student-admin-portal\\Student-admin-portal-API\\StudentAPI\\StudentAPI.csproj",
       "packagesPath": "C:\\Users\\Eigenaar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eigenaar\\Student-admin-portal-API\\StudentAPI\\obj\\",
+      "outputPath": "C:\\Users\\Eigenaar\\Student-admin-portal\\Student-admin-portal-API\\StudentAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
